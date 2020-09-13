@@ -44,6 +44,16 @@ for (var i = 0; i < keys.length; i++) {
                 input.innerHTML += btnVal;
                 decimalAdded = true;
             }
+        } else if (btnVal == '+/-') {
+            if (inputVal[0] != '-' && inputVal[0] != '+') {
+                input.innerHTML = '-' + inputVal
+            }
+            else if (inputVal[0] == '+'){
+                input.innerHTML = inputVal.replace(inputVal[0],'-');
+            }
+            else {
+                input.innerHTML = inputVal.replace(inputVal[0],'+');
+            }
         } else {
             input.innerHTML += btnVal;
         }
