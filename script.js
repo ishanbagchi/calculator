@@ -5,13 +5,14 @@ var decimalAdded = false;
 for (var i = 0; i < keys.length; i++) {
     keys[i].onclick = function(e) {
         var input = document.querySelector('.display');
-        var inputVal = input.innerHTML;
+        inputVal = input.innerHTML;
+        
         var btnVal = this.innerHTML;
-
-        if (btnVal == 'C') {
+        
+        if (btnVal == 'C' && inputVal.length<15 ) {
             input.innerHTML = '';
             decimalAdded = false;
-        } else if (btnVal == '=') {
+        } else if (btnVal == '=' && inputVal.length<15) {
             var equation = inputVal;
             var lastChar = equation[equation.length - 1];
 
@@ -22,9 +23,8 @@ for (var i = 0; i < keys.length; i++) {
 
             if (equation)
                 input.innerHTML = eval(equation);
-
             decimalAdded = false;
-        } else if (operators.indexOf(btnVal) > -1) {
+        } else if (operators.indexOf(btnVal) > -1 && inputVal.length<14) {
             var lastChar = inputVal[inputVal.length - 1];
 
             if (inputVal != '' && operators.indexOf(lastChar) == -1)
@@ -39,26 +39,32 @@ for (var i = 0; i < keys.length; i++) {
             }
 
             decimalAdded = false;
-        } else if (btnVal == '.') {
+        } else if (btnVal == '.' && inputVal.length<14) {
             if (decimalAdded) {
                 input.innerHTML += btnVal;
                 decimalAdded = true;
             }
         } else if (btnVal == '+/-') {
             if (inputVal[0] != '-' && inputVal[0] != '+') {
-                input.innerHTML = '-' + inputVal
+                if (inputVal.length<14){
+                input.innerHTML = '-' + inputVal;}
             }
-            else if (inputVal[0] == '+'){
+            else if (inputVal[0] == '+'  && inputVal.length<15){
                 input.innerHTML = inputVal.replace(inputVal[0],'-');
             }
             else {
+                if(inputVal.length<15)
                 input.innerHTML = inputVal.replace(inputVal[0],'+');
             }
-        } else {
-            input.innerHTML += btnVal;
+        } else{
+            if(inputVal.length<14) {
+            input.innerHTML = inputVal + btnVal;     
+            }      
         }
+    
 
         // prevent page jumps
         e.preventDefault();
     }
 }
+
