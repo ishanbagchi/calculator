@@ -68,3 +68,16 @@ for (var i = 0; i < keys.length; i++) {
     }
 }
 
+const toggleSwitch = document.querySelector('.theme-switch');
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        change.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        change.setItem('theme', 'light');
+    }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
