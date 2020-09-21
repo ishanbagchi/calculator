@@ -1,44 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/calculator.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+
+    <style>
+        * html,
+        body {
+            display: grid;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
-<body>
-    <div class='calculator' id='calc'>
-        <div class='toggle'>
-        <div class='theme-switch-wrapper'>
-            <label class='theme-switch' for='checkbox'>
-                <input id='checkbox' type='checkbox'>
-                <div class='slider round'></div>
-            </label>
-        </div>
-        </div>
-        <div class='display'></div>
-        <span class='c neumorphic'>C</span>
-        <span class='signed neumorphic'>+/-</span>
-        <span class='percent neumorphic'>%</span>
-        <span class='divide neumorphic'>÷</span>
-        <span class='seven neumorphic'>7</span>
-        <span class='eight neumorphic'>8</span>
-        <span class='nine neumorphic'>9</span>
-        <span class='times neumorphic'>x</span>
-        <span class='four neumorphic'>4</span>
-        <span class='five neumorphic'>5</span>
-        <span class='six neumorphic'>6</span>
-        <span class='minus neumorphic'>-</span>
-        <span class='one neumorphic'>1</span>
-        <span class='two neumorphic'>2</span>
-        <span class='three neumorphic'>3</span>
-        <span class='plus neumorphic'>+</span>
-        <span class='zero neumorphic'>0</span>
-        <span class='decimal neumorphic'>.</span>
-        <span class='equals neumorphic'>=</span>
+
+<body style="background-color: #e0e5ec;">
+    <div class="header">
+        <nav class="navbar navbar-dark bg-dark navbar-expand d-flex sticky-top">
+            <a class="navbar-brand">
+                <img src="images/calculator.svg" width="30" height="30" class="d-inline-block align-top"
+                    alt="Calculator" loading="lazy">
+                <span style="color: white; font-family: Niconne, cursive; font-size: 20px;">Calculator</span>
+            </a>
+        </nav>
     </div>
-        
+    <div class="main" style="margin-top: 20px;">
+        <div class='calculator body1' id='calc'>
+            <div class='toggle'>
+                <div class='theme-switch-wrapper'>
+                    <label class='theme-switch' for='checkbox'>
+                        <input id='checkbox' type='checkbox'>
+                        <div class='slider round'></div>
+                    </label>
+                </div>
+            </div>
+            <div class='display'></div>
+            <span class='c neumorphic'>C</span>
+            <span class='signed neumorphic'>+/-</span>
+            <span class='percent neumorphic'>%</span>
+            <span class='divide neumorphic'>÷</span>
+            <span class='seven neumorphic'>7</span>
+            <span class='eight neumorphic'>8</span>
+            <span class='nine neumorphic'>9</span>
+            <span class='times neumorphic'>x</span>
+            <span class='four neumorphic'>4</span>
+            <span class='five neumorphic'>5</span>
+            <span class='six neumorphic'>6</span>
+            <span class='minus neumorphic'>-</span>
+            <span class='one neumorphic'>1</span>
+            <span class='two neumorphic'>2</span>
+            <span class='three neumorphic'>3</span>
+            <span class='plus neumorphic'>+</span>
+            <span class='zero neumorphic'>0</span>
+            <span class='decimal neumorphic'>.</span>
+            <span class='equals neumorphic'>=</span>
+        </div>
+    </div>
+    <div class="footer card text-center"
+        style="background-color: rgba(0, 0, 0, 0.8); margin-top: 10px; border-radius: 0px;">
+        <div>
+            <div class="card-body">
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#staticBackdrop">
+                    Contributers...
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Contributers:</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <img src="images/Contributer1_1.png" width="200px" height="200px"
+                                        alt="Ishan Bagchi @Contributer1" style="margin-left: 30px;">
+                                    <a style="font-size: 30px; font-family: 'Niconne', cursive; margin-left: 20px; color: rgba(0, 0, 0, 1);"
+                                        href="https://github.com/ishanbagchi">Ishan
+                                        Bagchi</a>
+                                </p>
+                                <p>
+                                    <img src="images/Contributer2_1.png" width="200px" height="200px"
+                                        alt="Aman Raza @Contributer2" style="margin-left: 30px;">
+                                    <a style="font-size: 30px; font-family: 'Niconne', cursive; margin-left: 20px; color: rgba(0, 0, 0, 1);"
+                                        href="https://github.com/aman-raza">Aman Raza</a>
+                                </p>
+                                <p>
+                                    <img src="images/Contributer3_1.png" width="200px" height="200px"
+                                        alt="Falguni Sarkar @Contributer3" style="margin-left: 30px;">
+                                    <a style="font-size: 30px; font-family: 'Niconne', cursive; margin-left: 20px; color: rgba(0, 0, 0, 1);"
+                                        href="https://github.com/lostgirljourney">Falguni
+                                        Sarkar</a>
+                                </p>
+                                <p>
+                                    <img src="images/Contributer4_1.png" width="200px" height="200px"
+                                        alt="Sayani Ghosh @Contributer4" style="margin-left: 30px;">
+                                    <a style="font-size: 30px; font-family: 'Niconne', cursive; margin-left: 20px; color: rgba(0, 0, 0, 1);"
+                                        href="https://github.com/SayaniG371">Sayani Ghosh</a>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
