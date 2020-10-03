@@ -34,6 +34,8 @@ body {
   box-shadow: 6px 6px 16px 0 var(--dark-high-light), -6px -6px 16px 0 var(--soft-high-light), inset 6px 6px 5px 0 var(--dark-high-light), inset -6px -6px 5px 0 var(--soft-high-light);
   border: 5px solid var(--soft-high-light);
   color: var(--secondary-font-color);
+  overflow: hidden;
+  direction: rtl;
 }
 
 .neumorphic {
@@ -49,7 +51,7 @@ body {
 }
 
 /*
-  GRID LAYOUT & NON NEUMORPHIC 
+  GRID LAYOUT & NON NEUMORPHIC
 */
 body {
   display: grid;
@@ -300,7 +302,7 @@ body {
 }
 
 /*
-  GRID LAYOUT & NON NEUMORPHIC 
+  GRID LAYOUT & NON NEUMORPHIC
 */
 body {
   display: grid;
