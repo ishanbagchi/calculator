@@ -17,6 +17,12 @@ for (var i = 0; i < keys.length; i++) {
 
             equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
 
+            if(lastChar == '%')
+            {
+                equation=equation.slice(0, -1);
+                equation = eval(equation+'100');
+            }
+
             if (operators.indexOf(lastChar) > -1 || lastChar == '.')
                 equation = equation.replace(/.$/, '');
 
