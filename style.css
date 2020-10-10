@@ -323,6 +323,7 @@ body {
   font-size: 32px;
   letter-spacing: 4px;
   overflow: hidden;
+  direction: rtl;
 }
 
 .calculator {
